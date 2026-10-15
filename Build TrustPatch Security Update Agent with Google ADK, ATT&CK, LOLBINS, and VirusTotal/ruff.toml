@@ -1,0 +1,4 @@
+line-length = 120
+src = ["src", "tests"]
+[lint]
+ignore = ["B008"]

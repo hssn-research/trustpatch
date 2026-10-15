@@ -1,0 +1,14 @@
+{
+  "project": "TrustPatch Security Update Agent",
+  "generated": "2026-09-29",
+  "files": [
+    "README.md",
+    "DESIGN.md",
+    "AGENT-INSTRUCTION.md",
+    "INSTRUCTION.md",
+    "REQUIREMENT.md",
+    "DEFENSIVE_SECURITY.md",
+    "TODO.md",
+    "TODOFINISH.md"
+  ]
+}

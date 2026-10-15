@@ -1,0 +1,13 @@
+project_name: example
+artifacts_dir: .trustpatch
+virustotal:
+  api_key_env: VIRUSTOTAL_API_KEY
+  enabled: false
+# Each category is a list of argv-style commands (never shell strings) run inside
+# the disposable worktree, e.g. test: [["pytest"]]. Empty means "no evidence" —
+# TrustPatch never claims a check passed unless it actually ran.
+checks:
+  test: []
+  build: []
+  sast: []
+  secrets: []

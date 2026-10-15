@@ -1,0 +1,24 @@
+approval:
+  required_for:
+    - major_version
+    - cryptography
+    - authentication
+    - database
+    - native_library
+    - runtime_security_dependency
+    - build_toolchain
+    - ci_security
+    - infrastructure
+    - low_confidence
+risk:
+  auto_apply_maximum: low
+  fail_closed: true
+execution:
+  # If a manifest has a lockfile and the executor only edited the manifest text
+  # (no package manager was run), the dependency manager may still resolve the
+  # old pinned version at install time. Fail closed on that by default.
+  require_lockfile_refresh: true
+sources:
+  mitre_attack: true
+  lolbas: true
+  virustotal: true

@@ -1,0 +1,16 @@
+project_name: example
+artifacts_dir: .trustpatch
+network:
+  allowlist:
+    - https://api.osv.dev
+    - https://attack-taxii.mitre.org
+    - https://lolbas-project.github.io
+    - https://www.virustotal.com
+virustotal:
+  api_key_env: VIRUSTOTAL_API_KEY
+  enabled: false
+checks:
+  test: []
+  build: []
+  sast: []
+  secrets: []

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trustpatch"
+version = "0.1.0"
+description = "Fail-closed defensive security update planning agent"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27", "pydantic>=2.7", "pyyaml>=6.0", "typer>=0.12"]
+
+[project.optional-dependencies]
+adk = ["google-adk>=1.0"]
+dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.10", "types-PyYAML>=6.0", "pip-audit>=2.7"]
+
+[project.scripts]
+trustpatch = "trustpatch.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.mypy]
+mypy_path = "src"
+explicit_package_bases = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = "google.adk.*"
+ignore_missing_imports = true

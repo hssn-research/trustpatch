@@ -1,0 +1,19 @@
+approval:
+  required_for:
+    - major_version
+    - cryptography
+    - authentication
+    - database
+    - native_library
+    - runtime_security_dependency
+    - build_toolchain
+    - ci_security
+    - infrastructure
+    - low_confidence
+risk:
+  auto_apply_maximum: low
+  fail_closed: true
+sources:
+  mitre_attack: true
+  lolbas: true
+  virustotal: true
